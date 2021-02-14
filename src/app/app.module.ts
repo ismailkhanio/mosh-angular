@@ -8,6 +8,7 @@ import { BootstrapPanelComponent } from './bootstrap-panel/bootstrap-panel.compo
 import { CoursesComponent } from './courses/courses.component';
 import { InputFormatDirective } from './input-format.directive';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
