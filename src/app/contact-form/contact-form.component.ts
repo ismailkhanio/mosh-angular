@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'contact-form',
@@ -7,5 +8,16 @@ import { Component } from '@angular/core';
 })
 export class ContactFormComponent {
 
-  log(x: any) {console.log(x)};
+  contactMethods = [
+      { id: 1, name: 'Email'},
+      { id: 2, name: 'Phone'},
+      { id: 3, name: 'Other'},
+    ]
+
+  log(x: any) { console.log(x) };
+
+  onSubmit(f: NgForm) {
+    console.log(f);
+    console.log('form submitted', f.submitted);
+  }
 }
