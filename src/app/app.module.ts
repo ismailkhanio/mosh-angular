@@ -9,6 +9,10 @@ import { CoursesComponent } from './courses/courses.component';
 import { InputFormatDirective } from './input-format.directive';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FormsModule } from '@angular/forms';
+import { PostsService } from './services/posts.service';
+import { PostsComponent } from './posts/posts/posts.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -17,14 +21,18 @@ import { FormsModule } from '@angular/forms';
     BootstrapPanelComponent,
     CoursesComponent,
     InputFormatDirective,
-    ContactFormComponent
+    ContactFormComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    PostsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
